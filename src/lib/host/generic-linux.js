@@ -98,7 +98,8 @@ module.exports = {
     let userdata = {
       'workerType': process.env.DS_WORKER_TYPE,
       'provisionerId': process.env.DS_PROVISIONER_ID,
-      'capacity': process.env.DS_CAPACITY
+      'capacity': process.env.DS_CAPACITY,
+      'monitorProject': process.env.DS_MONITOR_PROJECT
     };
 
     log('read userdata', { text: userdata });
@@ -115,7 +116,8 @@ module.exports = {
       {
         capacity: userdata.capacity,
         workerType: userdata.workerType,
-        provisionerId: userdata.provisionerId
+        provisionerId: userdata.provisionerId,
+        monitorProject: userdata.monitorProject,
       },
       config
     );

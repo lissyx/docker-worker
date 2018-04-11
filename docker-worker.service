@@ -1,0 +1,18 @@
+[Unit]
+Description=TaskCluster Docker-Worker
+Documentation=https://github.com/taskcluster/docker-worker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=/opt/docker-worker/docker-worker.env
+WorkingDirectory=/opt/docker-worker/docker-worker-git/
+ExecStart=/usr/bin/node --harmony src/bin/worker.js --host generic-linux production
+Restart=on-failure
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
