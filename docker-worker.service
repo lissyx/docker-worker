@@ -10,7 +10,7 @@ User=root
 EnvironmentFile=/opt/docker-worker/docker-worker.env
 WorkingDirectory=/opt/docker-worker/docker-worker-git/
 ExecStart=/usr/bin/node --harmony src/bin/worker.js --host generic-linux production
-Restart=on-failure
+Restart=always
 StandardOutput=journal
 StandardError=journal
 
