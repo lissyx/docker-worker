@@ -1,0 +1,30 @@
+{
+  "provider": {
+    "providerType": "standalone",
+    "rootUrl": "https://taskcluster.net",
+    "clientId": "",
+    "accessToken": "",
+    "providerId": "",
+    "workerPoolId": "",
+    "workerGroup": "",
+    "workerId": ""
+  },
+  "workerNodeType": "",
+  "workerId": "",
+  "workerType": "",
+  "workerGroup": "",
+  "provisionerId": "",
+  "capacity": 1,
+  "deviceManagement": {
+    "cpu": {
+       "enabled": true
+     },
+     "loopbackAudio": {
+       "enabled": false
+     },
+     "loopbackVideo": {
+       "enabled": false
+     }
+   }
+}
+
